@@ -2,7 +2,7 @@
 
 ## Caso de uso 1: Pegar carta objetivo
 ### Escopo: 
-#### Resgatar a carta que diz seu objetivo.
+#### Ação de jogo.
 #
 ### Ator Principal: 
 #### Jogador.
@@ -31,7 +31,7 @@ Cartas objetivos: São uma série de cartas que expõem vários objetivos.
 
 #
 ## Caso de uso 2: Pegar carta território
-### Escopo: Resgatar uma carta território.
+### Escopo: Ação de jogo.
 #### 
 #
 ### Ator Principal: 
@@ -64,7 +64,7 @@ Carta território: Deve ser entregue ao jogador
 
 #
 ## Caso de uso 3: Trocar cartas território.
-### Escopo: Efetuar trocas.
+### Escopo: Ação de jogo.
 #### 
 #
 ### Ator Principal: 
@@ -73,13 +73,15 @@ Carta território: Deve ser entregue ao jogador
 ### interessados e Interesses: 
 ```
 - Jogador: O jogador tem a intenção de entregar as cartas para o monte e receber em troca algumas tropas.
-- Cartas: Devem ter os três
-- Tropas: 
+
+- Cartas: Devem conter os símbolos todos iguais ou todos diferentes
+
+- Tropas:  Devem ser entregues o número de tropas relacionadas a quantidade de trocas já realizadas pelo jogador.
 
 ```
 #
 ### Pré-condições: 
-#### O jogador deve ter um conjunto de cartas com três simbolos iguais ou diferentes.
+#### O jogador deve ter um conjunto de cartas com todos os três simbolos iguais ou todos diferentes.
 #
 ### Pós-condições: 
 #### O jogador deve ter recebido as tropas necessárias. 
@@ -98,13 +100,16 @@ Carta território: Deve ser entregue ao jogador
 #
 ## Caso de uso 4: Atacar território
 ### Escopo: 
-#### 
+#### Ação de jogo.
 #
 ### Ator Principal: 
-#### 
+#### Jogador(Atacante)
 #
 ### interessados e Interesses: 
 ```
+- Jogador(Atacante): O jogador que ataca tem como intenção conquistar um território e receber uma nova carta território para o seu monte.
+
+- Jogador(Defensor): Temo como intenção defender seu território para auxiliar na conquista de seu objetivo.
 
 ```
 #
@@ -115,47 +120,67 @@ Carta território: Deve ser entregue ao jogador
 #### Dominar o território
 #
 ### Garantia de sucesso: 
-#### 
+#### O jogador deve no final de sua ação deve ter conquistado um território e recebido sua carta território.
 #
 
 ### Cenário de sucesso:
-1. 
-2.
-3.
-4.
-5.
-6.
+1. O turno deve ser iniciado
+2. O jogador deve possuir territórios
+3. O jogador deve possuir mais de uma tropa alocada naquele território.
+4. O jogador só poderá atacar territórios adjacentes
+5. O jogador deverá usar a quantidade de dados relacionada com a quantidade de tropas alocadas no território que irá atacar.
+6. Os dados serão lançados.
+    ```
+    a. Em caso de vitória, o jogador defensor irá retirar a quantidade de peças de seu território igual a quantidade de dados que perdeu. 
+    
+    b. Em caso de derrota, o jogador atacante irá retirar a quantidade de peças de seu território igual a quantidade de dados que perdeu.
+
+    c. Em caso de empate, o jogador defensor recebe a vantagem.
+
+    Obs.: Este processo pode ser repetido até o jogador atacante ter uma tropa no território ou conquistar o território.
+    ``` 
 
 #
-## Caso de uso 5: 
+## Caso de uso 5: Defender território
 ### Escopo: 
-#### 
+#### Ação de jogo.
 #
 ### Ator Principal: 
-#### 
+#### Jogador(Defensor)
 #
 ### interessados e Interesses: 
 ```
+- Jogador(Atacante): O jogador que ataca tem como intenção conquistar um território e receber uma nova carta território para o seu monte.
+
+- Jogador(Defensor): Temo como intenção defender seu território para auxiliar na conquista de seu objetivo.
 
 ```
 #
 ### Pré-condições: 
-#### 
+#### Deve ser o turno do usúario
 #
 ### Pós-condições: 
-#### 
+#### Defender o seu território
 #
 ### Garantia de sucesso: 
-#### 
+#### O jogador deve no final de sua ação deve ter defendido seu território.
 #
 
 ### Cenário de sucesso:
-1. 
-2.
-3.
-4.
-5.
-6.
+1. O turno deve ser iniciado
+2. O jogador deverá ser atacado
+3. O jogador só poderá ser atacado por territórios adjacentes
+4. O jogador deverá usar a quantidade de dados relacionada com a quantidade de tropas alocadas no território que irá atacar.
+5. Os dados serão lançados.
+    ```
+    a. Em caso de vitória, o jogador defensor irá retirar a quantidade de peças de seu território igual a quantidade de dados que perdeu. 
+    
+    b. Em caso de derrota, o jogador atacante irá retirar a quantidade de peças de seu território igual a quantidade de dados que perdeu.
+
+    c. Em caso de empate, o jogador defensor recebe a vantagem.
+
+    Obs.: Este processo pode ser repetido até o jogador atacante ter uma tropa no território ou conquistar o território.
+    ``` 
 
 #
 ## Caso de uso 6: 
