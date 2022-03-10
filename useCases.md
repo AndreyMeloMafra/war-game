@@ -63,7 +63,7 @@ Carta território: Deve ser entregue ao jogador
 5. Coloca a carta recebida no topo do monte.
 
 #
-## Caso de uso 3: Trocar cartas território
+## Caso de uso 3: Trocar cartas território.
 ### Escopo: Efetuar trocas.
 #### 
 #
@@ -72,6 +72,9 @@ Carta território: Deve ser entregue ao jogador
 #
 ### interessados e Interesses: 
 ```
+- Jogador: O jogador tem a intenção de entregar as cartas para o monte e receber em troca algumas tropas.
+- Cartas: Devem ter os três
+- Tropas: 
 
 ```
 #
@@ -106,10 +109,10 @@ Carta território: Deve ser entregue ao jogador
 ```
 #
 ### Pré-condições: 
-#### 
+#### Deve ser o turno do usúario
 #
 ### Pós-condições: 
-#### 
+#### Dominar o território
 #
 ### Garantia de sucesso: 
 #### 
