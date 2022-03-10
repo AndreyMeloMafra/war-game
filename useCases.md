@@ -64,11 +64,11 @@ Carta território: Deve ser entregue ao jogador
 
 #
 ## Caso de uso 3: Trocar cartas território
-### Escopo: 
+### Escopo: Efetuar trocas.
 #### 
 #
 ### Ator Principal: 
-#### 
+#### Jogador
 #
 ### interessados e Interesses: 
 ```
@@ -76,25 +76,24 @@ Carta território: Deve ser entregue ao jogador
 ```
 #
 ### Pré-condições: 
-#### 
+#### O jogador deve ter um conjunto de cartas com três simbolos iguais ou diferentes.
 #
 ### Pós-condições: 
-#### 
+#### O jogador deve ter recebido as tropas necessárias. 
 #
 ### Garantia de sucesso: 
-#### 
+#### O jogador deve receber o número de tropas relacionado a aquela troca. E distribuir as peças em seus territórios.
 #
 
 ### Cenário de sucesso:
-1. 
-2.
-3.
-4.
-5.
-6.
+1. O turno deve ser iniciado
+2. O jogador deve ter três cartas de um único símbolo ou os três diferentes.
+3. Entregar suas cartas
+4. Receber a quantidade certa de tropas
+5. Distribuir tropas em seus territórios.
 
 #
-## Caso de uso 4: 
+## Caso de uso 4: Atacar território
 ### Escopo: 
 #### 
 #
